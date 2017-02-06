@@ -334,8 +334,9 @@
             if (listSettings.horizontal) {
               var isFirstHalf = event.clientX < rect.left + rect.width / 2;
             } else {
-              var isFirstHalf = event.clientY < rect.top + rect.height / 2;
+              var isFirstHalf = event.clientY < rect.top + rect.height / 4;
             }
+            // console.log('isFirstHalf: %o,\t event.clientY=%o, rect.top=%o, rect.height=%o', isFirstHalf, event.clientY, rect.top, rect.height);
             listNode.insertBefore(placeholderNode,
                 isFirstHalf ? listItemNode : listItemNode.nextSibling);
           }
